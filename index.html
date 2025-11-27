@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GLOVANCE DIGITAL SOLUTIONS | Modern Web Development</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-900 text-white transition-opacity duration-500">
+    <!-- Navigation -->
+    <nav
+      id="navbar"
+      class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800 transition-all duration-300"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <a
+            href="index.html"
+            class="text-2xl font-bold bg-gradient-to-r from-indigo-500 via-cyan-500 to-teal-500 bg-clip-text text-transparent"
+            >GLOVANCE</a
+          >
+
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="index.html"
+              class="text-white hover:text-cyan-400 transition-colors"
+              >Home</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Services</a
+            >
+            <a
+              href="portfolio.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Portfolio</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >About</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Contact</a
+            >
+          </div>
+
+          <div class="hidden md:block">
+            <a
+              href="contact.html"
+              class="px-6 py-2 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-full font-medium hover:shadow-lg hover:shadow-cyan-500/20 transition-all"
+              >Get Started</a
+            >
+          </div>
+
+          <button
+            id="mobile-menu-button"
+            class="md:hidden text-gray-400 hover:text-white"
+          >
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 pb-4 border-t border-gray-800"
+        >
+          <div class="flex flex-col space-y-4 mt-4">
+            <a
+              href="index.html"
+              class="text-white hover:text-cyan-400 transition-colors"
+              >Home</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Services</a
+            >
+            <a
+              href="portfolio.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Portfolio</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >About</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Contact</a
+            >
+            <a
+              href="contact.html"
+              class="px-4 py-2 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-full font-medium text-center"
+              >Get Started</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen flex items-center pt-20 pb-16 bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800"
+    >
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center fade-up">
+          <h1 class="text-5xl md:text-7xl font-bold mb-6">
+            <span
+              class="bg-gradient-to-r from-white via-cyan-200 to-teal-300 bg-clip-text text-transparent"
+              >Digital Excellence</span
+            >
+            <br />
+            <span
+              class="bg-gradient-to-r from-indigo-500 to-cyan-500 bg-clip-text text-transparent"
+              >Reimagined</span
+            >
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+            We craft stunning digital experiences that drive growth, engagement,
+            and innovation for forward-thinking businesses.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="contact.html"
+              class="px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-full font-medium text-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all transform hover:-translate-y-1"
+            >
+              Get Started
+            </a>
+            <a
+              href="portfolio.html"
+              class="px-8 py-4 bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-full font-medium text-lg hover:bg-gray-700/50 transition-all"
+            >
+              View Portfolio
+            </a>
+          </div>
+        </div>
+
+        <!-- Animated Background Elements -->
+        <div
+          class="absolute top-1/4 left-10 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Services Highlights -->
+    <section class="py-20 bg-gray-800/30">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 fade-up">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Our Digital Solutions
+          </h2>
+          <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+            Comprehensive services to elevate your digital presence and drive
+            business growth.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="glass-card p-8 rounded-2xl fade-up"
+            style="animation-delay: 0.1s"
+          >
+            <div
+              class="w-14 h-14 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-code text-white text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Web Development</h3>
+            <p class="text-gray-400 mb-6">
+              Custom websites and web applications built with cutting-edge
+              technologies for performance and scalability.
+            </p>
+            <a
+              href="services.html#web-development"
+              class="text-cyan-400 hover:text-cyan-300 font-medium inline-flex items-center"
+            >
+              Learn more <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <div
+            class="glass-card p-8 rounded-2xl fade-up"
+            style="animation-delay: 0.2s"
+          >
+            <div
+              class="w-14 h-14 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-palette text-white text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Branding & Design</h3>
+            <p class="text-gray-400 mb-6">
+              Strategic brand identity development and UI/UX design that creates
+              memorable digital experiences.
+            </p>
+            <a
+              href="services.html#branding"
+              class="text-cyan-400 hover:text-cyan-300 font-medium inline-flex items-center"
+            >
+              Learn more <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <div
+            class="glass-card p-8 rounded-2xl fade-up"
+            style="animation-delay: 0.3s"
+          >
+            <div
+              class="w-14 h-14 bg-gradient-to-r from-teal-500 to-indigo-500 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-shopping-cart text-white text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">E-commerce Solutions</h3>
+            <p class="text-gray-400 mb-6">
+              Complete online store development with secure payment integration
+              and conversion-optimized design.
+            </p>
+            <a
+              href="services.html#ecommerce"
+              class="text-cyan-400 hover:text-cyan-300 font-medium inline-flex items-center"
+            >
+              Learn more <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 fade-up">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
+          <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+            Explore our recent work delivering exceptional digital experiences
+            for clients across industries.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="group relative overflow-hidden rounded-2xl fade-up">
+            <div
+              class="h-80 bg-gradient-to-br from-indigo-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center"
+            >
+              <div class="text-center p-8">
+                <h3 class="text-2xl font-bold mb-4">
+                  Luxury Real Estate Platform
+                </h3>
+                <p class="text-gray-300 mb-6">
+                  A high-end property showcase with virtual tours and advanced
+                  search functionality.
+                </p>
+                <a
+                  href="portfolio.html"
+                  class="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium"
+                >
+                  View Project <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group relative overflow-hidden rounded-2xl fade-up"
+            style="animation-delay: 0.1s"
+          >
+            <div
+              class="h-80 bg-gradient-to-br from-cyan-500/20 to-teal-500/20 rounded-2xl flex items-center justify-center"
+            >
+              <div class="text-center p-8">
+                <h3 class="text-2xl font-bold mb-4">Tech Startup Dashboard</h3>
+                <p class="text-gray-300 mb-6">
+                  A comprehensive analytics dashboard with real-time data
+                  visualization and reporting.
+                </p>
+                <a
+                  href="portfolio.html"
+                  class="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium"
+                >
+                  View Project <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12 fade-up" style="animation-delay: 0.2s">
+          <a
+            href="portfolio.html"
+            class="px-8 py-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-full font-medium hover:bg-gray-700/50 transition-all inline-flex items-center"
+          >
+            View All Projects <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Glovance -->
+    <section class="py-20 bg-gray-800/30">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 fade-up">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Why Choose Glovance
+          </h2>
+          <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+            We combine technical expertise with creative vision to deliver
+            exceptional results.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center fade-up" style="animation-delay: 0.1s">
+            <div
+              class="w-20 h-20 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-rocket text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Cutting-Edge Technology</h3>
+            <p class="text-gray-400">
+              We leverage the latest frameworks and tools to build fast,
+              scalable, and future-proof solutions.
+            </p>
+          </div>
+
+          <div class="text-center fade-up" style="animation-delay: 0.2s">
+            <div
+              class="w-20 h-20 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-paint-brush text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Pixel-Perfect Design</h3>
+            <p class="text-gray-400">
+              Every detail is meticulously crafted to create visually stunning
+              and highly functional interfaces.
+            </p>
+          </div>
+
+          <div class="text-center fade-up" style="animation-delay: 0.3s">
+            <div
+              class="w-20 h-20 bg-gradient-to-r from-teal-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-headset text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Dedicated Support</h3>
+            <p class="text-gray-400">
+              Our team provides ongoing support and maintenance to ensure your
+              digital assets perform optimally.
+            </p>
+          </div>
+
+          <div class="text-center fade-up" style="animation-delay: 0.4s">
+            <div
+              class="w-20 h-20 bg-gradient-to-r from-indigo-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-chart-line text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Results-Driven Approach</h3>
+            <p class="text-gray-400">
+              We focus on delivering solutions that drive measurable business
+              growth and user engagement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 fade-up">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Client Testimonials
+          </h2>
+          <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+            Hear what our clients have to say about working with Glovance
+            Digital Solutions.
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div class="testimonial-slider">
+            <div class="testimonial-slide active">
+              <div class="glass-card p-8 rounded-2xl">
+                <div class="flex items-center mb-6">
+                  <div
+                    class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold"
+                  >
+                    JS
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="font-bold">John Smith</h4>
+                    <p class="text-gray-400">CEO, TechVision Inc.</p>
+                  </div>
+                </div>
+                <p class="text-lg text-gray-300 italic">
+                  "Glovance transformed our online presence with a stunning
+                  website that perfectly captures our brand essence. Their
+                  attention to detail and technical expertise exceeded our
+                  expectations."
+                </p>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="glass-card p-8 rounded-2xl">
+                <div class="flex items-center mb-6">
+                  <div
+                    class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold"
+                  >
+                    SR
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="font-bold">Sarah Rodriguez</h4>
+                    <p class="text-gray-400">Marketing Director, InnovateCo</p>
+                  </div>
+                </div>
+                <p class="text-lg text-gray-300 italic">
+                  "Working with Glovance was a game-changer for our business.
+                  They delivered a seamless e-commerce platform that increased
+                  our conversions by 40% in just three months."
+                </p>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="glass-card p-8 rounded-2xl">
+                <div class="flex items-center mb-6">
+                  <div
+                    class="w-12 h-12 bg-gradient-to-r from-teal-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold"
+                  >
+                    MP
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="font-bold">Michael Peterson</h4>
+                    <p class="text-gray-400">Founder, GrowthLabs</p>
+                  </div>
+                </div>
+                <p class="text-lg text-gray-300 italic">
+                  "The team at Glovance understands both design and
+                  functionality. They created a custom web application that
+                  streamlined our operations and improved user engagement
+                  significantly."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center mt-8 space-x-2">
+            <button
+              class="testimonial-dot w-3 h-3 rounded-full bg-cyan-500 active"
+            ></button>
+            <button
+              class="testimonial-dot w-3 h-3 rounded-full bg-gray-700"
+            ></button>
+            <button
+              class="testimonial-dot w-3 h-3 rounded-full bg-gray-700"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+      <div class="container mx-auto px-6 text-center">
+        <div class="max-w-3xl mx-auto fade-up">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            Ready to Transform Your Digital Presence?
+          </h2>
+          <p class="text-xl text-gray-300 mb-10">
+            Let's discuss how we can help you achieve your business goals with
+            cutting-edge digital solutions.
+          </p>
+          <a
+            href="contact.html"
+            class="px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-full font-medium text-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all transform hover:-translate-y-1 inline-flex items-center"
+          >
+            Start Your Project <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <a
+              href="index.html"
+              class="text-2xl font-bold bg-gradient-to-r from-indigo-500 via-cyan-500 to-teal-500 bg-clip-text text-transparent mb-4 inline-block"
+              >GLOVANCE</a
+            >
+            <p class="text-gray-400 mb-6">
+              Crafting exceptional digital experiences that drive growth and
+              innovation.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-cyan-400 transition-colors"
+              >
+                <i class="fab fa-twitter text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-cyan-400 transition-colors"
+              >
+                <i class="fab fa-linkedin text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-cyan-400 transition-colors"
+              >
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-cyan-400 transition-colors"
+              >
+                <i class="fab fa-dribbble text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-6">Services</h3>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Branding & Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >E-commerce Solutions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Website Redesign</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-6">Company</h3>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="portfolio.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-6">Contact</h3>
+            <ul class="space-y-4 text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-envelope mt-1 mr-3 text-cyan-400"></i>
+                <span>hello@glovance.com</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-phone mt-1 mr-3 text-cyan-400"></i>
+                <span>+1 (555) 123-4567</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-cyan-400"></i>
+                <span>San Francisco, CA</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500"
+        >
+          <p>&copy; 2023 GLOVANCE DIGITAL SOLUTIONS. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

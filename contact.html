@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | GLOVANCE DIGITAL SOLUTIONS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-900 text-white transition-opacity duration-500">
+    <!-- Navigation -->
+    <nav
+      id="navbar"
+      class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800 transition-all duration-300"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <a
+            href="index.html"
+            class="text-2xl font-bold bg-gradient-to-r from-indigo-500 via-cyan-500 to-teal-500 bg-clip-text text-transparent"
+            >GLOVANCE</a
+          >
+
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Home</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Services</a
+            >
+            <a
+              href="portfolio.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Portfolio</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >About</a
+            >
+            <a
+              href="contact.html"
+              class="text-white hover:text-cyan-400 transition-colors"
+              >Contact</a
+            >
+          </div>
+
+          <div class="hidden md:block">
+            <a
+              href="contact.html"
+              class="px-6 py-2 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-full font-medium hover:shadow-lg hover:shadow-cyan-500/20 transition-all"
+              >Get Started</a
+            >
+          </div>
+
+          <button
+            id="mobile-menu-button"
+            class="md:hidden text-gray-400 hover:text-white"
+          >
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 pb-4 border-t border-gray-800"
+        >
+          <div class="flex flex-col space-y-4 mt-4">
+            <a
+              href="index.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Home</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Services</a
+            >
+            <a
+              href="portfolio.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Portfolio</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >About</a
+            >
+            <a
+              href="contact.html"
+              class="text-white hover:text-cyan-400 transition-colors"
+              >Contact</a
+            >
+            <a
+              href="contact.html"
+              class="px-4 py-2 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-full font-medium text-center"
+              >Get Started</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="pt-32 pb-20 bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800"
+    >
+      <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center fade-up">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6">
+            <span
+              class="bg-gradient-to-r from-white via-cyan-200 to-teal-300 bg-clip-text text-transparent"
+              >Contact Us</span
+            >
+          </h1>
+          <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+            Ready to start your next project? Get in touch with our team to
+            discuss how we can help bring your vision to life.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Contact Form -->
+          <div class="fade-up">
+            <h2 class="text-3xl font-bold mb-8">Send Us a Message</h2>
+            <form id="contact-form" class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="name" class="block text-gray-300 mb-2"
+                    >Your Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
+                  />
+                  <div class="error-message text-red-400 text-sm mt-1 hidden">
+                    Please enter your name
+                  </div>
+                </div>
+                <div>
+                  <label for="email" class="block text-gray-300 mb-2"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
+                  />
+                  <div class="error-message text-red-400 text-sm mt-1 hidden">
+                    Please enter a valid email address
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label for="subject" class="block text-gray-300 mb-2"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                  class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
+                />
+                <div class="error-message text-red-400 text-sm mt-1 hidden">
+                  Please enter a subject
+                </div>
+              </div>
+
+              <div>
+                <label for="message" class="block text-gray-300 mb-2"
+                  >Your Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
+                ></textarea>
+                <div class="error-message text-red-400 text-sm mt-1 hidden">
+                  Please enter your message
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full px-6 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-lg font-medium text-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all transform hover:-translate-y-1"
+              >
+                Send Message
+              </button>
+
+              <div
+                id="form-success"
+                class="hidden mt-4 p-4 bg-green-900/30 border border-green-800 rounded-lg text-green-400"
+              >
+                <i class="fas fa-check-circle mr-2"></i> Thank you for your
+                message! We'll get back to you soon.
+              </div>
+
+              <div
+                id="form-error"
+                class="hidden mt-4 p-4 bg-red-900/30 border border-red-800 rounded-lg text-red-400"
+              >
+                <i class="fas fa-exclamation-circle mr-2"></i> There was an
+                error sending your message. Please try again.
+              </div>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="fade-up" style="animation-delay: 0.1s">
+            <h2 class="text-3xl font-bold mb-8">Get In Touch</h2>
+            <div class="space-y-8">
+              <div class="flex items-start">
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-lg flex items-center justify-center text-white mr-6 flex-shrink-0"
+                >
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-2">Our Location</h3>
+                  <p class="text-gray-400">San Francisco, California</p>
+                  <p class="text-gray-400">United States</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-lg flex items-center justify-center text-white mr-6 flex-shrink-0"
+                >
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-2">Phone Number</h3>
+                  <p class="text-gray-400">+1 (555) 123-4567</p>
+                  <p class="text-gray-400">Mon - Fri, 9:00 AM - 6:00 PM PST</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-teal-500 to-indigo-500 rounded-lg flex items-center justify-center text-white mr-6 flex-shrink-0"
+                >
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-2">Email Address</h3>
+                  <p class="text-gray-400">hello@glovance.com</p>
+                  <p class="text-gray-400">We'll respond within 24 hours</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-12">
+              <h3 class="text-xl font-bold mb-6">Follow Us</h3>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-gray-800/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all"
+                >
+                  <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-gray-800/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all"
+                >
+                  <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-gray-800/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all"
+                >
+                  <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-gray-800/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all"
+                >
+                  <i class="fab fa-dribbble text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-800/30">
+      <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto">
+          <div class="text-center mb-16 fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p class="text-xl text-gray-400">
+              Find answers to common questions about our services and process.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <div
+              class="faq-item bg-gray-800/50 rounded-lg overflow-hidden fade-up"
+            >
+              <button
+                class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-700/30 transition-all"
+              >
+                <span class="text-lg font-medium"
+                  >How long does a typical web development project take?</span
+                >
+                <i
+                  class="fas fa-chevron-down text-cyan-400 transition-transform"
+                ></i>
+              </button>
+              <div class="faq-answer p-6 border-t border-gray-700 hidden">
+                <p class="text-gray-300">
+                  The timeline for web development projects varies based on
+                  complexity and scope. A simple business website typically
+                  takes 4-6 weeks, while more complex web applications can take
+                  3-6 months. During our initial consultation, we'll provide a
+                  detailed timeline based on your specific requirements.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="faq-item bg-gray-800/50 rounded-lg overflow-hidden fade-up"
+              style="animation-delay: 0.1s"
+            >
+              <button
+                class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-700/30 transition-all"
+              >
+                <span class="text-lg font-medium"
+                  >Do you provide ongoing support after project
+                  completion?</span
+                >
+                <i
+                  class="fas fa-chevron-down text-cyan-400 transition-transform"
+                ></i>
+              </button>
+              <div class="faq-answer p-6 border-t border-gray-700 hidden">
+                <p class="text-gray-300">
+                  Yes, we offer comprehensive support and maintenance packages
+                  to ensure your digital assets remain secure, up-to-date, and
+                  performing optimally. Our support services include security
+                  updates, performance optimization, content updates, and
+                  technical assistance.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="faq-item bg-gray-800/50 rounded-lg overflow-hidden fade-up"
+              style="animation-delay: 0.2s"
+            >
+              <button
+                class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-700/30 transition-all"
+              >
+                <span class="text-lg font-medium"
+                  >What is your pricing structure?</span
+                >
+                <i
+                  class="fas fa-chevron-down text-cyan-400 transition-transform"
+                ></i>
+              </button>
+              <div class="faq-answer p-6 border-t border-gray-700 hidden">
+                <p class="text-gray-300">
+                  We offer custom pricing based on project requirements. After
+                  understanding your needs during our initial consultation,
+                  we'll provide a detailed proposal with transparent pricing. We
+                  work with businesses of all sizes and can tailor solutions to
+                  fit various budgets.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="faq-item bg-gray-800/50 rounded-lg overflow-hidden fade-up"
+              style="animation-delay: 0.3s"
+            >
+              <button
+                class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-700/30 transition-all"
+              >
+                <span class="text-lg font-medium"
+                  >Do you work with clients outside of the United States?</span
+                >
+                <i
+                  class="fas fa-chevron-down text-cyan-400 transition-transform"
+                ></i>
+              </button>
+              <div class="faq-answer p-6 border-t border-gray-700 hidden">
+                <p class="text-gray-300">
+                  Absolutely! We work with clients worldwide. Our team is
+                  experienced in collaborating across different time zones and
+                  cultures. We use modern communication tools to ensure seamless
+                  collaboration regardless of location.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+      <div class="container mx-auto px-6 text-center">
+        <div class="max-w-3xl mx-auto fade-up">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            Ready to Get Started?
+          </h2>
+          <p class="text-xl text-gray-300 mb-10">
+            Contact us today to discuss your project and discover how we can
+            help you achieve your digital goals.
+          </p>
+          <a
+            href="contact.html"
+            class="px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-full font-medium text-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all transform hover:-translate-y-1 inline-flex items-center"
+          >
+            Start Your Project <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <a
+              href="index.html"
+              class="text-2xl font-bold bg-gradient-to-r from-indigo-500 via-cyan-500 to-teal-500 bg-clip-text text-transparent mb-4 inline-block"
+              >GLOVANCE</a
+            >
+            <p class="text-gray-400 mb-6">
+              Crafting exceptional digital experiences that drive growth and
+              innovation.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-cyan-400 transition-colors"
+              >
+                <i class="fab fa-twitter text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-cyan-400 transition-colors"
+              >
+                <i class="fab fa-linkedin text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-cyan-400 transition-colors"
+              >
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-cyan-400 transition-colors"
+              >
+                <i class="fab fa-dribbble text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-6">Services</h3>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Branding & Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >E-commerce Solutions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Website Redesign</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-6">Company</h3>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="portfolio.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-6">Contact</h3>
+            <ul class="space-y-4 text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-envelope mt-1 mr-3 text-cyan-400"></i>
+                <span>hello@glovance.com</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-phone mt-1 mr-3 text-cyan-400"></i>
+                <span>+1 (555) 123-4567</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-cyan-400"></i>
+                <span>San Francisco, CA</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500"
+        >
+          <p>&copy; 2023 GLOVANCE DIGITAL SOLUTIONS. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
