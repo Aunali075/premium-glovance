@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GLOVANCE DIGITAL SOLUTIONS | Modern Web Development</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Your exact website colors */
+      :root {
+        --primary-dark: #0a0e17;
+        --card-dark: #111827;
+        --accent-orange: #f97316;
+        --accent-red: #ef4444;
+        --text-light: #f3f4f6;
+        --text-gray: #9ca3af;
+      }
+
+      body {
+        background-color: var(--primary-dark);
+        color: var(--text-light);
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+      }
+
+      /* Your website's gradient */
+      .hero-gradient {
+        background: linear-gradient(
+          135deg,
+          rgba(10, 14, 23, 0.95) 0%,
+          rgba(17, 24, 39, 0.95) 100%
+        );
+      }
+
+      /* Card styling matching your site */
+      .glass-card {
+        background: rgba(17, 24, 39, 0.8);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* Your button gradient */
+      .btn-gradient {
+        background: linear-gradient(
+          135deg,
+          var(--accent-orange) 0%,
+          var(--accent-red) 100%
+        );
+      }
+
+      .btn-gradient:hover {
+        background: linear-gradient(
+          135deg,
+          var(--accent-red) 0%,
+          var(--accent-orange) 100%
+        );
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
+      }
+
+      /* Hover effect matching your site */
+      .hover-lift:hover {
+        transform: translateY(-8px);
+        border-color: var(--accent-orange);
+        transition: all 0.3s ease;
+      }
+
+      /* Recommended badge */
+      .recommended-badge {
+        background: linear-gradient(
+          135deg,
+          var(--accent-orange) 0%,
+          var(--accent-red) 100%
+        );
+        clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white transition-opacity duration-500">
+    <!-- Navigation -->
+    <nav
+      id="navbar"
+      class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800 transition-all duration-300"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <a
+            href="index.html"
+            class="text-2xl font-bold bg-gradient-to-r from-indigo-500 via-cyan-500 to-teal-500 bg-clip-text text-transparent"
+            >GLOVANCE</a
+          >
+
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-400 hover:text-cyan-400 transition-colors"
+              >Home</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Services</a
+            >
+            <a
+              href="pricing.html"
+              class="text-white-400 hover:text-white transition-colors"
+              >Pricing</a
+            >
+            <a
+              href="portfolio.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Portfolio</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >About</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Contact</a
+            >
+          </div>
+
+          <div class="hidden md:block">
+            <a
+              href="contact.html"
+              class="px-6 py-2 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-full font-medium hover:shadow-lg hover:shadow-cyan-500/20 transition-all"
+              >Get Started</a
+            >
+          </div>
+
+          <button
+            id="mobile-menu-button"
+            class="md:hidden text-gray-400 hover:text-white"
+          >
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 pb-4 border-t border-gray-800"
+        >
+          <div class="flex flex-col space-y-4 mt-4">
+            <a
+              href="index.html"
+              class="text-gray-400 hover:text-cyan-400 transition-colors"
+              >Home</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Services</a
+            >
+            <a
+              href="pricing.html"
+              class="text-white-400 hover:text-white transition-colors"
+              >Pricing</a
+            >
+            <a
+              href="portfolio.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Portfolio</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >About</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Contact</a
+            >
+            <a
+              href="contact.html"
+              class="px-4 py-2 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-full font-medium text-center"
+              >Get Started</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Pricing Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 hero-gradient">
+      <div class="max-w-7xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-16">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+            Simple, Transparent
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500"
+              >Pricing</span
+            >
+          </h1>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Choose the perfect plan for your digital transformation. No hidden
+            fees, no surprises.
+          </p>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- Starter Card -->
+          <div
+            class="glass-card rounded-2xl p-8 hover-lift border border-gray-800 relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-950 opacity-50"
+            ></div>
+            <div class="relative z-10">
+              <h3 class="text-2xl font-bold text-white mb-2">Starter</h3>
+              <div class="mb-6">
+                <div class="flex items-baseline">
+                  <span class="text-5xl font-bold text-white">$99</span>
+                </div>
+                <p class="text-gray-400 mt-2">
+                  Perfect for launching your digital presence
+                </p>
+              </div>
+
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300">1-page landing page</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300">Mobile responsive</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300">Contact / lead form</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300">Fast delivery (3–4 days)</span>
+                </li>
+              </ul>
+
+              <button
+                class="w-full py-3 px-6 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-700 transition duration-300 border border-gray-700"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+
+          <!-- Growth Card (Recommended) -->
+          <div
+            class="glass-card rounded-2xl p-8 hover-lift border border-orange-500/30 relative overflow-hidden transform scale-105 shadow-2xl shadow-orange-500/10"
+          >
+            <!-- Recommended Badge -->
+            <div class="absolute -top-2 left-1/2 transform -translate-x-1/2">
+              <div
+                class="recommended-badge px-6 py-2 text-white font-semibold text-sm flex items-center"
+              >
+                <svg
+                  class="w-4 h-4 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <span>Recommended</span>
+              </div>
+            </div>
+
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/5"
+            ></div>
+            <div class="relative z-10">
+              <h3 class="text-2xl font-bold text-white mb-2">Growth</h3>
+              <div class="mb-6">
+                <div class="flex items-baseline">
+                  <span class="text-5xl font-bold text-white">$199</span>
+                </div>
+                <p class="text-gray-300 mt-2">Ideal for scaling businesses</p>
+              </div>
+
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300">Up to 5 sections</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300">Conversion-focused layout</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300">CTA + lead capture</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300">Basic SEO setup</span>
+                </li>
+              </ul>
+
+              <button
+                class="w-full py-3 px-6 btn-gradient text-white font-semibold rounded-lg transition duration-300"
+              >
+                Choose Growth
+              </button>
+            </div>
+          </div>
+
+          <!-- Pro Card -->
+          <div
+            class="glass-card rounded-2xl p-8 hover-lift border border-gray-800 relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-950 opacity-50"
+            ></div>
+            <div class="relative z-10">
+              <h3 class="text-2xl font-bold text-white mb-2">Pro</h3>
+              <div class="mb-6">
+                <div class="flex items-baseline">
+                  <span class="text-5xl font-bold text-white">$349</span>
+                </div>
+                <p class="text-gray-400 mt-2">Complete digital solution</p>
+              </div>
+
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300">Multi-page website</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300">Custom sections</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300">Priority support</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300">Best for businesses</span>
+                </li>
+              </ul>
+
+              <button
+                class="w-full py-3 px-6 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-700 transition duration-300 border border-gray-700"
+              >
+                Go Pro
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-20 max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-center text-white mb-12">
+            Frequently Asked Questions
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="glass-card rounded-xl p-6 border border-gray-800">
+              <h4 class="font-semibold text-white mb-3 text-lg">
+                What's your revision policy?
+              </h4>
+              <p class="text-gray-400">
+                We offer 2 rounds of revisions for each package to ensure
+                complete satisfaction with the final product.
+              </p>
+            </div>
+            <div class="glass-card rounded-xl p-6 border border-gray-800">
+              <h4 class="font-semibold text-white mb-3 text-lg">
+                Do you offer hosting?
+              </h4>
+              <p class="text-gray-400">
+                Yes, we provide hosting solutions starting at $19/month with
+                99.9% uptime guarantee and SSL included.
+              </p>
+            </div>
+            <div class="glass-card rounded-xl p-6 border border-gray-800">
+              <h4 class="font-semibold text-white mb-3 text-lg">
+                Can I upgrade my plan later?
+              </h4>
+              <p class="text-gray-400">
+                Absolutely! You can upgrade anytime and only pay the difference
+                for the remaining service period.
+              </p>
+            </div>
+            <div class="glass-card rounded-xl p-6 border border-gray-800">
+              <h4 class="font-semibold text-white mb-3 text-lg">
+                What's the delivery timeline?
+              </h4>
+              <p class="text-gray-400">
+                Starter: 3-4 days, Growth: 5-7 days, Pro: 10-14 days. Rush
+                delivery available for 25% extra.
+              </p>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div
+            class="text-center mt-12 glass-card rounded-xl p-8 border border-gray-800"
+          >
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Ready to transform your digital presence?
+            </h3>
+            <p class="text-gray-300 mb-6">
+              Contact us for custom solutions or questions about our packages.
+            </p>
+            <a href="contact.html" target="_blank">
+              <button
+                class="btn-gradient text-white font-semibold py-3 px-8 rounded-lg inline-flex items-center hover:shadow-lg transition duration-300"
+              >
+                <span>Get in Touch</span>
+                <svg
+                  class="w-5 h-5 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  ></path>
+                </svg>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 border-t border-gray-800 py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <a
+              href="index.html"
+              class="text-2xl font-bold bg-gradient-to-r from-indigo-500 via-cyan-500 to-teal-500 bg-clip-text text-transparent mb-4 inline-block"
+              >GLOVANCE</a
+            >
+            <p class="text-gray-400 mb-6">
+              Crafting exceptional digital experiences that drive growth and
+              innovation.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-cyan-400 transition-colors"
+              >
+                <i class="fab fa-twitter text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-cyan-400 transition-colors"
+              >
+                <i class="fab fa-linkedin text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-cyan-400 transition-colors"
+              >
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-cyan-400 transition-colors"
+              >
+                <i class="fab fa-dribbble text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-6">Services</h3>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Branding & Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >E-commerce Solutions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Website Redesign</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-6">Company</h3>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="portfolio.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-6">Contact</h3>
+            <ul class="space-y-4 text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-envelope mt-1 mr-3 text-cyan-400"></i>
+                <span>glovanceagency@gmail.com</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-phone mt-1 mr-3 text-cyan-400"></i>
+                <span>+92 (302) 4299022</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-cyan-400"></i>
+                <span>Soon 😊</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500"
+        >
+          <p>&copy; 2025 GLOVANCE DIGITAL SOLUTIONS. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Button interactions
+      document.querySelectorAll("button").forEach((button) => {
+        button.addEventListener("click", function () {
+          const card = this.closest(".glass-card");
+          const plan = card.querySelector("h3").textContent;
+          const price = card.querySelector(".text-5xl").textContent;
+
+          // Your website's alert style
+          const alertMsg = `🚀 Interested in ${plan} package (${price})?\n\nOur team will contact you shortly to discuss your project requirements.`;
+          alert(alertMsg);
+        });
+      });
+
+      // Add subtle hover animations
+      document.querySelectorAll(".glass-card").forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+          this.style.transition = "all 0.3s ease";
+        });
+      });
+    </script>
+  </body>
+</html>
