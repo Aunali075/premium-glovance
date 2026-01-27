@@ -180,142 +180,142 @@ function initFAQ() {
 }
 
 // Contact form functionality
-function initContactForm() {
-    const contactForm = document.getElementById('contact-form');
+// function initContactForm() {
+//     const contactForm = document.getElementById('contact-form');
     
-    if (!contactForm) return;
+//     if (!contactForm) return;
     
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+//     contactForm.addEventListener('submit', function(e) {
+//         e.preventDefault();
         
-        // Get form data
-        const formData = new FormData(contactForm);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const subject = formData.get('subject');
-        const message = formData.get('message');
+//         // Get form data
+//         const formData = new FormData(contactForm);
+//         const name = formData.get('name');
+//         const email = formData.get('email');
+//         const subject = formData.get('subject');
+//         const message = formData.get('message');
         
-        // Validate form
-        if (validateForm(name, email, subject, message)) {
-            // Show loading state
-            const submitButton = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-            submitButton.innerHTML = '<div class="loading-spinner"></div> Sending...';
-            submitButton.disabled = true;
+//         // Validate form
+//         if (validateForm(name, email, subject, message)) {
+//             // Show loading state
+//             const submitButton = contactForm.querySelector('button[type="submit"]');
+//             const originalText = submitButton.textContent;
+//             submitButton.innerHTML = '<div class="loading-spinner"></div> Sending...';
+//             submitButton.disabled = true;
             
-            // Simulate form submission (replace with actual form submission)
-            setTimeout(() => {
-                // Show success message
-                document.getElementById('form-success').classList.remove('hidden');
-                document.getElementById('form-error').classList.add('hidden');
+//             // Simulate form submission (replace with actual form submission)
+//             setTimeout(() => {
+//                 // Show success message
+//                 document.getElementById('form-success').classList.remove('hidden');
+//                 document.getElementById('form-error').classList.add('hidden');
                 
-                // Reset form
-                contactForm.reset();
+//                 // Reset form
+//                 contactForm.reset();
                 
-                // Reset button
-                submitButton.innerHTML = originalText;
-                submitButton.disabled = false;
+//                 // Reset button
+//                 submitButton.innerHTML = originalText;
+//                 submitButton.disabled = false;
                 
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                    document.getElementById('form-success').classList.add('hidden');
-                }, 5000);
-            }, 1500);
-        }
-    });
+//                 // Hide success message after 5 seconds
+//                 setTimeout(() => {
+//                     document.getElementById('form-success').classList.add('hidden');
+//                 }, 5000);
+//             }, 1500);
+//         }
+//     });
     
     // Real-time validation
-    const inputs = contactForm.querySelectorAll('input, textarea');
-    inputs.forEach(input => {
-        input.addEventListener('blur', function() {
-            validateField(this);
-        });
+//     const inputs = contactForm.querySelectorAll('input, textarea');
+//     inputs.forEach(input => {
+//         input.addEventListener('blur', function() {
+//             validateField(this);
+//         });
         
-        input.addEventListener('input', function() {
-            clearError(this);
-        });
-    });
+//         input.addEventListener('input', function() {
+//             clearError(this);
+//         });
+//     });
     
-    function validateForm(name, email, subject, message) {
-        let isValid = true;
+//     function validateForm(name, email, subject, message) {
+//         let isValid = true;
         
-        if (!name || name.trim() === '') {
-            showError(document.getElementById('name'), 'Please enter your name');
-            isValid = false;
-        }
+//         if (!name || name.trim() === '') {
+//             showError(document.getElementById('name'), 'Please enter your name');
+//             isValid = false;
+//         }
         
-        if (!email || !isValidEmail(email)) {
-            showError(document.getElementById('email'), 'Please enter a valid email address');
-            isValid = false;
-        }
+//         if (!email || !isValidEmail(email)) {
+//             showError(document.getElementById('email'), 'Please enter a valid email address');
+//             isValid = false;
+//         }
         
-        if (!subject || subject.trim() === '') {
-            showError(document.getElementById('subject'), 'Please enter a subject');
-            isValid = false;
-        }
+//         if (!subject || subject.trim() === '') {
+//             showError(document.getElementById('subject'), 'Please enter a subject');
+//             isValid = false;
+//         }
         
-        if (!message || message.trim() === '') {
-            showError(document.getElementById('message'), 'Please enter your message');
-            isValid = false;
-        }
+//         if (!message || message.trim() === '') {
+//             showError(document.getElementById('message'), 'Please enter your message');
+//             isValid = false;
+//         }
         
-        return isValid;
-    }
+//         return isValid;
+//     }
     
-    function validateField(field) {
-        const value = field.value.trim();
+//     function validateField(field) {
+//         const value = field.value.trim();
         
-        if (field.id === 'name' && value === '') {
-            showError(field, 'Please enter your name');
-            return false;
-        }
+//         if (field.id === 'name' && value === '') {
+//             showError(field, 'Please enter your name');
+//             return false;
+//         }
         
-        if (field.id === 'email') {
-            if (value === '') {
-                showError(field, 'Please enter your email address');
-                return false;
-            } else if (!isValidEmail(value)) {
-                showError(field, 'Please enter a valid email address');
-                return false;
-            }
-        }
+//         if (field.id === 'email') {
+//             if (value === '') {
+//                 showError(field, 'Please enter your email address');
+//                 return false;
+//             } else if (!isValidEmail(value)) {
+//                 showError(field, 'Please enter a valid email address');
+//                 return false;
+//             }
+//         }
         
-        if (field.id === 'subject' && value === '') {
-            showError(field, 'Please enter a subject');
-            return false;
-        }
+//         if (field.id === 'subject' && value === '') {
+//             showError(field, 'Please enter a subject');
+//             return false;
+//         }
         
-        if (field.id === 'message' && value === '') {
-            showError(field, 'Please enter your message');
-            return false;
-        }
+//         if (field.id === 'message' && value === '') {
+//             showError(field, 'Please enter your message');
+//             return false;
+//         }
         
-        clearError(field);
-        return true;
-    }
+//         clearError(field);
+//         return true;
+//     }
     
-    function showError(field, message) {
-        field.classList.add('form-error');
-        const errorElement = field.parentNode.querySelector('.error-message');
-        if (errorElement) {
-            errorElement.textContent = message;
-            errorElement.classList.remove('hidden');
-        }
-    }
+//     function showError(field, message) {
+//         field.classList.add('form-error');
+//         const errorElement = field.parentNode.querySelector('.error-message');
+//         if (errorElement) {
+//             errorElement.textContent = message;
+//             errorElement.classList.remove('hidden');
+//         }
+//     }
     
-    function clearError(field) {
-        field.classList.remove('form-error');
-        const errorElement = field.parentNode.querySelector('.error-message');
-        if (errorElement) {
-            errorElement.classList.add('hidden');
-        }
-    }
+//     function clearError(field) {
+//         field.classList.remove('form-error');
+//         const errorElement = field.parentNode.querySelector('.error-message');
+//         if (errorElement) {
+//             errorElement.classList.add('hidden');
+//         }
+//     }
     
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-}
+//     function isValidEmail(email) {
+//         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//         return emailRegex.test(email);
+//     }
+// }
 
 // Page transitions
 function initPageTransitions() {
